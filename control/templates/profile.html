@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content%}
+    <div class="main_card_wrapper">
+        <div class="card">
+            <img src="{{ image_file }}" alt="{{ company.company_name }}">
+            <h1>{{ company.company_name }}</h1>
+            <p>{{ company.description }}</p>
+            <a href="/update_profile/{{ company.id }}"><button class="update">Update</Button></a>
+        </div>
+    </div>
+{% endblock %}

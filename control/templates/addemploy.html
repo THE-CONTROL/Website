@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+    <div>
+        <div class="login-form-wrapper">
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <h2 style="text-align: center; font-size: x-large;">Add Employee</h2>
+                <div class="container">
+                  <label><b>Employee Name:</b></label>
+                  <input type="text" placeholder="Enter employee name" name="employee_name" required>
+
+                  <label><b>Job Description:</b></label>
+                  <input type="text" placeholder="What is the employees' role at the company?" 
+                  name="job_description">
+
+                  <label for="gender"><b>Gender:</b></label>
+                  <select name="gender" id="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+
+                  <label style="width: 100%;"><b>Profile Picture:</b></label>
+                  <input type="file" name="file">
+
+                  <button type="submit" style="background-color:green">Add</button>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                  <a href="/employees"><button type="button" class="cancelbtn">Cancel</button></a>
+                </div>
+              </form>
+        </div>
+    </div>
+{% endblock %}

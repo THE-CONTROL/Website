@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+    <div>
+        <div class="login-form-wrapper">
+            <form action="#" method="POST" enctype="multipart/form-data">
+              <h2 style="text-align: center; font-size: x-large;">Sign up</h2>
+                <div class="container">
+                  <label><b>Company Name:</b></label>
+                  <input type="text" placeholder="Enter company name" name="company_name" required>
+
+                  <label><b>Description:</b></label>
+                  <input type="text" placeholder="What does your company do?" name="description">
+
+                  <label style="width: 100%;"><b>Profile Picture:</b></label>
+                  <input type="file" name="file">
+
+                  <label><b>Password:</b></label>
+                  <input type="password" placeholder="Enter Password" name="password1" required>
+
+                  <label><b>Confirm Password:</b></label>
+                  <input type="password" placeholder="Confirm Password" name="password2" required>
+
+                  <button type="submit" style="background-color:green">Sign up</button>
+                </div>
+                
+              </form>
+        </div>
+    </div>
+{% endblock %}

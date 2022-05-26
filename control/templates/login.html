@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content%}
+    <div>
+        <div class="login-form-wrapper">
+            <form action="#" method="POST">
+              <h2 style="text-align: center; font-size: x-large;">Login</h2>
+                <div class="container">
+                  <label><b>Company name:</b></label>
+                  <input type="text" placeholder="Enter company name" name="company_name" required>
+
+                  <label><b>Password:</b></label>
+                  <input type="password" placeholder="Enter password" name="password" required>
+
+                  <button type="submit" style="background-color:green">Login</button>
+                </div>
+              </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content%}
+    <div class="card_wrapper">
+        {% for employee in company.employees %}
+            {% if employee %}
+                <div class="em_card">
+                    <img src="{{ employee.image }}" alt="{{ employee.employee_name }}"
+                        style="width:100%">
+                    <h1>{{ employee.employee_name }}</h1>
+                    <p>{{ employee.job_description }}</p>
+                    <p>{{ employee.gender }}</p>
+                    <a href="/update_employ/{{ employee.id }}"><button 
+                        style="width: 50px; font-size: 50%;">Update</Button></a>
+                    <a href="/delete_employ/{{ employee.id }}"><button 
+                        style="width: 50px;  font-size: 50%;">Delete</Button></a>
+                </div>
+            {% endif %}
+        {% endfor %}
+        {% if not company.employees %}
+                <h3 style="color: rgb(255, 255, 255); padding: 4px;">
+                    There are no employees in your employee list!</h3>
+        {% endif %}
+            <div class="add_em_btn_wra">
+                <a href="/addemploy"><button class="update" style="width: 70px;">Add</Button></a>
+            </div>
+    </div>
+{% endblock %}
